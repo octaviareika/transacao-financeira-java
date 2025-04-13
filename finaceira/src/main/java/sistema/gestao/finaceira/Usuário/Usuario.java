@@ -36,5 +36,6 @@ public class Usuario {
     private LocalDateTime dataCriacao = LocalDateTime.now();
 
 
+
     
 }
