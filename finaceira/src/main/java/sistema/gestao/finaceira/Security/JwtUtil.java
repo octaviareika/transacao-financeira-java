@@ -8,7 +8,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 @Component
-public class JwtUtil {
+public class JwtUtil { // essa classe serve para gerar o token e validar o token
 
     private final String SECRET_KEY = "secreta";
 

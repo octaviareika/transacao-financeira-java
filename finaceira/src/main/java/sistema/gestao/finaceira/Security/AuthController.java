@@ -29,8 +29,9 @@ public class AuthController {
     public String login(@RequestBody AuthRequest auth){
 
         try {
+            // serve para fazer a autenticação do usuário. Assim que fizer isso, o Spring Security vai verificar se o usuário existe e se a senha está correta
             Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(auth.getEmail(), auth.getSenha()));
-            return jwtUtil.generateToken(auth.getEmail());
+            return jwtUtil.generateToken(auth.getEmail()); // gera o token
 
         }catch(AuthenticationException e){
             throw new RuntimeException("Credenciais inválidas");
