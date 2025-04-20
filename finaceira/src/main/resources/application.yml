@@ -1,3 +1,4 @@
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/gestao_financeira?createDatabaseIfNotExist=true
@@ -12,3 +13,8 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+pluggy:
+  client-id: ${PLUGGY_CLIENT_ID:df3405a0-ebdb-42e6-a296-5318d8ef5fb4}
+  client-secret: ${PLUGGY_CLIENT_SECRET:020084dc-4eea-42a8-b54d-10b83fa17a33}
+  base-url: https://api.pluggy.ai

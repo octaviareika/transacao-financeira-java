@@ -35,7 +35,8 @@ public class Usuario {
     @Column(name = "criado_em")
     private LocalDateTime dataCriacao = LocalDateTime.now();
 
-
+    private String pluggyUserToken;
+    private String pluggyItemId;
 
     
 }
