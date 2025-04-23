@@ -7,12 +7,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 @RestController
-@RequiredArgsConstructor
 public class PluggyController {
 
     private PluggyService pluggyService;
 
-    @GetMapping("/api/pluggy/authorization")
+    public PluggyController(PluggyService pluggyService) {
+        this.pluggyService = pluggyService;
+    }
+
+    @GetMapping("/api/pluggy/token")
     public String gerarToken(){
         return pluggyService.gerarToken();
     }
